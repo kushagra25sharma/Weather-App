@@ -18,7 +18,6 @@ app.get("/", function(req, res) {
 app.post("/", function(req, res) {
   const appid = process.env.APP_ID;
   const city = req.body.City;
-  console.log(appid);
   const url = process.env.URL + city + "&units=metric&appid=" + appid;
 
   https.get(url, function(response) {//get method for making request by providing url & fetching response.
